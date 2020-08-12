@@ -35,12 +35,38 @@ $(function() {
 					});
 					return false;
 			}
-	});
+  });
+  
 	jQuery.validator.addMethod('maskRu', function(value, element) {
 			console.log(/\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value));
 			return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
 	});
 	$('[name="tel"]').mask("+7(999)999-9999",{autoclear: false});
+
+  $(window).on('resize', function(e){
+    // Переменная, по которой узнаем запущен слайдер или нет.
+    // Храним её в data
+    var init = $(".card-box").data('init-slider');
+    // Если мобильный
+    if(window.innerWidth < 992){
+      // Если слайдер не запущен
+      if(init != 1){
+        // Запускаем слайдер и записываем в data init-slider = 1
+        $('.product-left').slick({
+          arrows: false,
+          dots: true
+        }).data({'init-slider': 1});
+      }
+    }
+    // Если десктоп
+    else {
+      // Если слайдер запущен
+      if(init == 1){
+        // Разрушаем слайдер и записываем в data init-slider = 0
+        $('#card-box').slick('unslick').data({'init-slider': 0});
+      }
+    }
+  }).trigger('resize');
 
 });
 
