@@ -74,29 +74,53 @@ $(function() {
 (function() {
   
   //Вызов окна колбека
-  // openCallback = document.querySelector('.openCallback');
-  // callbackModal = document.querySelector('.modal-wrapper__callback');
+  openRestore = document.querySelector('.openRestore');
+  restoreModal = document.querySelector('.modal-wrapper__restore');
 
-  // openCallback.addEventListener('click', function () {
-  //   openBaseModal();
-  //   callbackModal.classList.remove('hidden');
-  //   setTimeout(function () {
-  //     callbackModal.classList.remove('animation');
-  //   }, 20);
-  // })
+  openRestore.addEventListener('click', function () {
+    openBaseModal();
+    restoreModal.classList.remove('hidden');
+    setTimeout(function () {
+      restoreModal.classList.remove('animation');
+    }, 20);
+  })
 
-  // function closecallbackPopup() {
-  //   if (!callbackModal.classList.contains('hidden')) {
-  //     callbackModal.classList.add('animation');    
-  //     callbackModal.addEventListener('transitionend', function(e) {
-  //       callbackModal.classList.add('hidden');
-  //     }, {
-  //       capture: false,
-  //       once: true,
-  //       passive: false
-  //     });
-  //   }
-  // };
+  function closeRestorePopup() {
+    if (!restoreModal.classList.contains('hidden')) {
+      restoreModal.classList.add('animation');    
+      restoreModal.addEventListener('transitionend', function(e) {
+        restoreModal.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+    }
+  };
+
+  openError = document.querySelector('.openError');
+  errorModal = document.querySelector('.modal-wrapper__error');
+
+  openError.addEventListener('click', function () {
+    openBaseModal();
+    errorModal.classList.remove('hidden');
+    setTimeout(function () {
+      errorModal.classList.remove('animation');
+    }, 20);
+  })
+
+  function closeErrorPopup() {
+    if (!errorModal.classList.contains('hidden')) {
+      errorModal.classList.add('animation');    
+      errorModal.addEventListener('transitionend', function(e) {
+        errorModal.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+    }
+  };
 
   //Вызов окна колбека
   openLeftMenu = document.querySelector('.openMenu');
@@ -124,9 +148,140 @@ $(function() {
 
   };
 
+  openSignUp = document.querySelector('.openSignUp');
+  signUpModal = document.querySelector('.modal-wrapper__sign-up');
+
+  openSignUp.addEventListener('click', function () {
+    openBaseModal();
+    signUpModal.classList.remove('hidden');
+    setTimeout(function () {
+      signUpModal.classList.remove('animation');
+    }, 20);
+  })
+
+  function closeSignUpModal() {
+    if (!signUpModal.classList.contains('hidden')) {
+      signUpModal.classList.add('animation');    
+      signUpModal.addEventListener('transitionend', function(e) {
+        signUpModal.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+    }
+
+  };
+
+  openCheck = document.querySelector('.openCheck');
+  checkModal = document.querySelector('.modal-wrapper__check');
+
+  openCheck.addEventListener('click', function () {
+    closeSignUpModal();
+    checkModal.classList.remove('hidden');
+    setTimeout(function () {
+      checkModal.classList.remove('animation');
+    }, 20);
+  })
+
+  function closeCheckModal() {
+    if (!checkModal.classList.contains('hidden')) {
+      checkModal.classList.add('animation');    
+      checkModal.addEventListener('transitionend', function(e) {
+        checkModal.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+    }
+
+  };
+
+  openPassword = document.querySelector('.openPassword');
+  passwordModal = document.querySelector('.modal-wrapper__password');
+
+  openPassword.addEventListener('click', function () {
+    closeSignUpModal();
+    passwordModal.classList.remove('hidden');
+    setTimeout(function () {
+      passwordModal.classList.remove('animation');
+    }, 20);
+  })
+
+  function closePasswordModal() {
+    if (!passwordModal.classList.contains('hidden')) {
+      passwordModal.classList.add('animation');    
+      passwordModal.addEventListener('transitionend', function(e) {
+        passwordModal.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+    }
+
+  };
+
+  openCabinet = document.querySelector('.openCabinet');
+  cabinetModal = document.querySelector('.modal-wrapper__cabinet');
+
+  openCabinet.addEventListener('click', function () {
+    openBaseModal();
+    cabinetModal.classList.remove('hidden');
+    setTimeout(function () {
+      cabinetModal.classList.remove('animation');
+    }, 20);
+  })
+
+  function closeCabinetModal() {
+    if (!cabinetModal.classList.contains('hidden')) {
+      cabinetModal.classList.add('animation');    
+      cabinetModal.addEventListener('transitionend', function(e) {
+        cabinetModal.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+    }
+
+  };
+
+  openFavorites = document.querySelector('.openFavorites');
+  favoritesModal = document.querySelector('.modal-wrapper__favorites');
+
+  openFavorites.addEventListener('click', function () {
+    openBaseModal();
+    favoritesModal.classList.remove('hidden');
+    setTimeout(function () {
+      favoritesModal.classList.remove('animation');
+    }, 20);
+  })
+
+  function closeFavoritesModal() {
+    if (!favoritesModal.classList.contains('hidden')) {
+      favoritesModal.classList.add('animation');    
+      favoritesModal.addEventListener('transitionend', function(e) {
+        favoritesModal.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+    }
+
+  };
+
   function closeAllModal() {
-    // closecallbackPopup();
+    closeRestorePopup();
+    closeErrorPopup();
     closeleftMenuModal();
+    closeSignUpModal();
+    closeCheckModal();
+    closePasswordModal();
+    closeCabinetModal();
+    closeFavoritesModal();
     closeBaseModal();
   };
 
