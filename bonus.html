@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Product page</title>
+    <title>My favotites</title>
     <meta name="description" content="">
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,10 +29,10 @@
                 </div>
                 <div class="header-desktop__menu">
                     <div class="header-desktop__menu-item">
-                        <a class="header-desktop__menu-text" href="#">Ru</a>
+                        <a class="header-desktop__menu-text openCabinet" href="#">Ru</a>
                     </div>
                     <div class="header-desktop__menu-item">
-                        <button class="header-desktop__menu-text header-desktop__menu-btn">Аккаунт</button>
+                        <button class="header-desktop__menu-text header-desktop__menu-btn openSignUp">Аккаунт</button>
                     </div>
                     <div class="header-desktop__menu-item header-desktop__menu-item--circle">
                         <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@
                         </svg>
                         <span class="header-desktop__menu-span">99</span>
                     </div>
-                    <div class="header-desktop__menu-item header-desktop__menu-item--circle">
+                    <div class="header-desktop__menu-item header-desktop__menu-item--circle openFavorites">
                         <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
                                 <path
@@ -131,116 +131,60 @@
 
     <main>
 
-        <section class="product">
-            <div class="container">
-                <div class="product__inner">
-                    <div class="product-left">
-                        <img src="/img/product/1.jpg" alt="">
-                        <img src="/img/product/2.jpg" alt="">
-                        <img src="/img/product/3.jpg" alt="">
-                        <img src="/img/product/4.jpg" alt="">
-                    </div>
-                    <div class="product-right">
-                        <div class="product-right__inner">
-                            <div class="product-right__item">
-                                <div class="product-right__text">
-                                    <p class="product-name">Свитер</p>
-                                    <p class="product-price">32 000 ₽</p>
-                                    <p class="product-description">Свеитер плотной вязки с логотипом</p>
-                                </div>
-                                <div class="colors">
-                                    <div class="color-text">Цвет</div>
-                                    <div class="colors__inner">
-                                        <div class="colors__item" style="background: #4A6079;"></div>
-                                        <div class="colors__item" style="background: #DD4B4B;"></div>
-                                        <div class="colors__item"
-                                            style="background: #F7FBFF; border: 0.5px solid #000000;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sizes">
-                                <div class="sizes__inner">
-                                    <div class="size__item">XS</div>
-                                    <div class="size__item">S</div>
-                                    <div class="size__item size__item--active">M</div>
-                                    <div class="size__item">L</div>
-                                    <div class="size__item size__item--disabled">XL</div>
-                                </div>
-                                <a href="#" class="sizes__text">Как выбрать размер</a>
-                            </div>
-                            <div class="product-btn">
-                                <button class="btn btn--product">Добавить в корзину</button>
-                                <svg width="60" height="51" viewBox="0 0 60 51" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M0.0249023 0.585449H60.0249V50.5854H0.0249023V0.585449Z" fill="#212121" />
-                                    <path
-                                        d="M29.588 33.4884C29.3442 33.4884 29.109 33.3962 28.926 33.2286C28.234 32.5971 27.567 32.0039 26.9786 31.4802L26.9756 31.4775C25.2503 29.9427 23.7604 28.6175 22.7235 27.3122C21.5648 25.8529 21.0249 24.469 21.0249 22.9573C21.0249 21.4886 21.5076 20.1336 22.3836 19.1418C23.27 18.1381 24.4866 17.5854 25.8092 17.5854C26.7976 17.5854 27.7031 17.9115 28.5002 18.5549C28.9023 18.8796 29.2669 19.2769 29.588 19.7405C29.9095 19.2769 30.2737 18.8796 30.6761 18.5549C31.4729 17.9115 32.3784 17.5854 33.3668 17.5854C34.6894 17.5854 35.906 18.1381 36.7924 19.1418C37.6688 20.1336 38.1511 21.4886 38.1511 22.9573C38.1511 24.469 37.6116 25.8529 36.4525 27.3122C35.4159 28.6179 33.9261 29.9431 32.2008 31.4775C31.6114 32.0018 30.9431 32.596 30.2496 33.229C30.067 33.3962 29.8319 33.4884 29.588 33.4884ZM25.8092 18.6324C24.7699 18.6324 23.8153 19.0654 23.1209 19.8512C22.4161 20.6493 22.0277 21.7521 22.0277 22.9569C22.0277 24.2284 22.4806 25.3655 23.4955 26.644C24.4766 27.8795 25.936 29.1775 27.6259 30.6804L27.6289 30.6832C28.2196 31.2086 28.8892 31.8042 29.5863 32.4403C30.2874 31.8032 30.9581 31.2065 31.5502 30.6801C33.2397 29.1771 34.6991 27.8795 35.6802 26.6436C36.6951 25.3651 37.148 24.2281 37.148 22.9566C37.148 21.7514 36.7596 20.6486 36.0548 19.8509C35.3604 19.0647 34.4058 18.6321 33.3668 18.6321C32.6055 18.6321 31.9067 18.8845 31.2896 19.3827C30.7397 19.8268 30.3567 20.3881 30.1319 20.7809C30.0165 20.983 29.8131 21.1035 29.588 21.1035C29.3629 21.1035 29.1595 20.983 29.0441 20.7809C28.8197 20.3881 28.4367 19.8268 27.8864 19.3827C27.2693 18.8852 26.5705 18.6324 25.8092 18.6324Z"
-                                        fill="white" stroke="white" stroke-width="0.305825" />
-                                </svg>
-                            </div>
-                            <a href="#" class="product-link">Продолжить покупки
-                                <svg width="13" height="16" viewBox="0 0 13 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.99987 15L11.5332 8L4.99987 0.999999" stroke="#212121" />
-                                    <path d="M0.99987 15L7.5332 8L0.999871 0.999999" stroke="#212121" />
-                                </svg>
-                            </a>
-                        </div>
+        <section class="user-page container">
+            <div class="user-page__top">
+                <p class="user-page__top-text">Личный кабинет</p>
+                <svg class="close--mobile" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L20 19M20 1L1 19" stroke="#212121" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="user-page__inner">
+                <div class="user-page__mobile-wrap">
+                    <div class="user-page__mobile-menu">
+                        <p class="user-page__mobile-item">Мои данные</p>
+                        <p class="user-page__mobile-item">Мои заказы</p>
+                        <p class="user-page__mobile-item">Избранное</p>
+                        <p class="user-page__mobile-item user-page__mobile-item--active">Бонусы</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="other-products container">
-            <div class="title">
-                <h2 class="title__h2 title__h2--left title__h2--mobile">Товары в этом образе</h2>
-            </div>
-            <div class="other-products__inner">
-                <a href="#" class="shop-item shop-item--product">
-                    <img class="shop-item__img shop-item__img--product" src="/img/product/5.png">
-                    <p class="shop-item__name">Куртка с большими карманами</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-                <a href="#" class="shop-item shop-item--product">
-                    <img class="shop-item__img shop-item__img--product" src="/img/product/6.png">
-                    <p class="shop-item__name">Куртка с большими карманами</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-            </div>
-        </section>
-
-        <section class="latest-products container">
-            <div class="title">
-                <h2 class="title__h2 title__h2--left title__h2--mobile">Недавно просмотренные</h2>
-            </div>
-            <div class="latest-products__inner">
-                <a href="#" class="shop-item shop-item--latest-product">
-                    <img class="shop-item__img shop-item__img--latest-product" src="/img/product/7.jpg">
-                    <p class="shop-item__name">Куртка с большими карманами</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-                <a href="#" class="shop-item shop-item--latest-product">
-                    <img class="shop-item__img shop-item__img--latest-product" src="/img/product/8.jpg">
-                    <p class="shop-item__name">Куртка из</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-                <a href="#" class="shop-item shop-item--latest-product">
-                    <img class="shop-item__img shop-item__img--latest-product" src="/img/product/9.jpg">
-                    <p class="shop-item__name">Куртка из</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-                <a href="#" class="shop-item shop-item--latest-product">
-                    <img class="shop-item__img shop-item__img--latest-product" src="/img/product/10.jpg">
-                    <p class="shop-item__name">Куртка из</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-                <a href="#" class="shop-item shop-item--latest-product">
-                    <img class="shop-item__img shop-item__img--latest-product" src="/img/product/11.jpg">
-                    <p class="shop-item__name">Куртка из</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
+                <svg class="user-page__avatar" width="53" height="53" viewBox="0 0 53 53" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="26.5" cy="26.5" r="26.5" fill="#C4C4C4" />
+                    <path d="M26.173 36.5699H16.4297L27.0762 16.4493L36.5697 16.4299L26.173 36.5699Z" fill="#212121"
+                        fill-opacity="0.5" />
+                </svg>
+                <div class="user-page__aside user-page__aside--bonus">
+                    <svg class="user-page__avatar--mobile" width="53" height="53" viewBox="0 0 53 53" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="26.5" cy="26.5" r="26.5" fill="#C4C4C4" />
+                        <path d="M26.173 36.5699H16.4297L27.0762 16.4493L36.5697 16.4299L26.173 36.5699Z" fill="#212121"
+                            fill-opacity="0.5" />
+                    </svg>
+                    <div class="user-page__aside-item">
+                        <p class="user-page__aside-name">Константин</p>
+                        <p class="user-page__aside-lastname">Константипольский</p>
+                    </div>
+                    <div class="user-page__aside-item user-page__aside-item--mt40">
+                        <a href="#" class="user-page__aside-text">Мои данные</a>
+                        <a href="#" class="user-page__aside-text">Мои заказы</a>
+                        <a href="#" class="user-page__aside-text">Избранное</a>
+                        <a href="#" class="user-page__aside-text user-page__aside-text--active">Бонусы</a>
+                        <a href="#" class="user-page__aside-text">Выход</a>
+                    </div>
+                </div>
+                <div class="user-page__main">
+                    <h1 class="user-page__main-title user-page__main-title--bonus">Бонусные баллы</h1>
+                    <div class="bonus-item">
+                        <p class="bonus-text__top">На вашем балансе </p>
+                        <p class="bonus-text__bottom">23 950 баллов</p>
+                    </div>
+                    <div class="bonus-item">
+                        <p class="bonus-text__top">Статус</p>
+                        <p class="bonus-text__bottom">Друг</p>
+                    </div>                    
+                    <a href="#" class="sizes__text user-page__main-link">Выйти из аккаунта</a>
+                </div>
             </div>
         </section>
 
@@ -358,12 +302,13 @@
                     </div>
                 </div>
             </div>
+
     </footer>
 
-    <!-- <h3>Проверка вызова модального окна</h3>
-	<button class="openCallback">Открыть callback</button>
-	<button class="openMenu">Открыть menu</button>
-	<br>
+    <h3>Проверка вызова модального окна</h3>
+    <button class="openRestore">Открыть popup восстановление почты</button>
+    <button class="openError">Открыть popup ошибка</button>
+    <!-- <br>
 	<br>
 	<h3>Валидация форм</h3>
 	<form class="offer-form-modal" autocomplete="off">
@@ -380,28 +325,78 @@
 
     <!-- Модальные окна -->
     <div class="modal-wrapper hidden animation">
-        <div class="modal-wrapper__callback hidden animation">
+        <div class="modal-wrapper__restore hidden animation">
             <button class="modal-wrapper__close">
-                <svg width="25" height="25" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="26.713" y1="9.83421" x2="10.803" y2="25.7441" stroke="#C4C4C4" stroke-width="3"
-                        stroke-linecap="round" stroke-linejoin="round"></line>
-                    <line x1="26.5918" y1="25.7129" x2="11" y2="10.1212" stroke="#C4C4C4" stroke-width="3"
-                        stroke-linecap="round" stroke-linejoin="round"></line>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L17.5 17.5M17.5 1L1 17.5" stroke="#212121" stroke-width="2" />
                 </svg>
             </button>
-            <div class="modal-wrapper__callback-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti minus placeat sequi esse sed
-                    perspiciatis illum itaque at ipsa, eveniet excepturi! Atque, provident fuga nobis excepturi
-                    dignissimos dicta aut labore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nobis
-                    autem cumque, corrupti ipsam deserunt aspernatur odit distinctio neque minus saepe eum tempora ab et
-                    magnam earum praesentium delectus voluptate. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Et exercitationem animi dolorem odio provident. Eius ipsa ipsam repellendus id non! Inventore
-                    temporibus ex quibusdam reiciendis optio maiores natus ullam sit! Lorem ipsum, dolor sit amet
-                    consectetur adipisicing elit. Unde deleniti tempore quos cupiditate! Nobis quo nulla enim ipsum. Qui
-                    in minus voluptatem itaque numquam corporis rerum eveniet repudiandae illo dolorem! Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. At ab culpa tempora odio maxime, repudiandae aliquid,
-                    praesentium neque sunt, libero numquam? Corrupti architecto deleniti rerum necessitatibus suscipit
-                    unde, aut aliquid! Lorem ipsum, dolor sit </p>
+            <div class="modal-wrapper__restore-body">
+                <div class="restore-inner">
+                    <svg width="208" height="18" viewBox="0 0 208 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.8058 14.3021H8.42628L7.03805 16.9978H0L8.99127 0.290527H18.3215L27.8294 16.9978H20.2263L18.8058 14.3021ZM13.5434 4.37454L10.5571 10.1212H16.5943L13.5434 4.37454Z"
+                            fill="#1E1E1C" />
+                        <path
+                            d="M38.6605 0.290552L49.2175 9.79838V0.290552H56.1103V16.9979H49.1691L37.7888 6.86048V16.9817H30.896V0.274414L38.6605 0.290552Z"
+                            fill="#1E1E1C" />
+                        <path d="M67.2004 4.84266H59.3552V0.290527H81.9868V4.84266H74.1416V16.9978H67.2004V4.84266Z"
+                            fill="#1E1E1C" />
+                        <path d="M90.494 17.0463H82.3098L91.2526 0.290552L99.227 0.274414L90.494 17.0463Z"
+                            fill="#1E1E1C" />
+                        <path d="M109.945 0.290527V12.2197H122.552V16.9978H103.004V0.290527H109.945Z" fill="#1E1E1C" />
+                        <path
+                            d="M138.84 0C150.576 0 152.093 5.1494 152.093 8.29716V8.97514C152.093 12.0906 150.608 17.353 138.84 17.353H137.742C125.958 17.353 124.473 12.0906 124.473 8.97514V8.29716C124.473 5.1494 125.958 0.0161482 137.742 0.0161482L138.84 0ZM144.893 8.44243C144.893 6.66678 143.65 4.48756 138.275 4.48756C132.803 4.48756 131.657 6.66678 131.657 8.44243V8.71685C131.657 10.4764 132.9 12.8331 138.275 12.8331C143.65 12.8331 144.893 10.5732 144.893 8.76528V8.44243Z"
+                            fill="#1E1E1C" />
+                        <path
+                            d="M191.286 10.7023L181.343 0.274414H189.656L194.951 6.05336L200.358 0.290552H207.961L198.228 10.7508V16.9979H191.286V10.7023Z"
+                            fill="#1E1E1C" />
+                        <path
+                            d="M168.832 0H167.88C157.145 0 154.998 4.69741 154.998 8.28101V8.91056C154.998 12.4296 157.323 17.3369 167.266 17.3369H167.831C173.497 17.3369 175.773 15.4321 176.484 14.7057C176.823 15.3191 177.21 16.4813 177.339 17.014H181.714V7.60304H168.251V10.8638H174.627C174.627 11.3965 173.11 12.9461 168.413 12.9461C163.909 12.9461 162.182 10.8638 162.182 8.71685V8.47472C162.182 6.27936 163.57 4.34229 168.461 4.34229C172.932 4.34229 173.982 5.61753 174.272 6.23094H181.585C181.391 3.89031 179.648 0 168.832 0Z"
+                            fill="#1E1E1C" />
+                    </svg>
+                    <p class="restore-title">Успешно!</p>
+                    <p class="restore-text">Мы отправили письмо для восстановления пароля на вашу электронную почту.
+                        Пожалуйста, перейдите по ссылке
+                        из письма </p>
+                    <button class="btn btn--restore">Продолжить покупки</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-wrapper__error hidden animation">
+            <button class="modal-wrapper__close">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L17.5 17.5M17.5 1L1 17.5" stroke="#212121" stroke-width="2" />
+                </svg>
+            </button>
+            <div class="modal-wrapper__error-body">
+                <div class="restore-inner">
+                    <svg width="208" height="18" viewBox="0 0 208 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.8058 14.3021H8.42628L7.03805 16.9978H0L8.99127 0.290527H18.3215L27.8294 16.9978H20.2263L18.8058 14.3021ZM13.5434 4.37454L10.5571 10.1212H16.5943L13.5434 4.37454Z"
+                            fill="#1E1E1C" />
+                        <path
+                            d="M38.6605 0.290552L49.2175 9.79838V0.290552H56.1103V16.9979H49.1691L37.7888 6.86048V16.9817H30.896V0.274414L38.6605 0.290552Z"
+                            fill="#1E1E1C" />
+                        <path d="M67.2004 4.84266H59.3552V0.290527H81.9868V4.84266H74.1416V16.9978H67.2004V4.84266Z"
+                            fill="#1E1E1C" />
+                        <path d="M90.494 17.0463H82.3098L91.2526 0.290552L99.227 0.274414L90.494 17.0463Z"
+                            fill="#1E1E1C" />
+                        <path d="M109.945 0.290527V12.2197H122.552V16.9978H103.004V0.290527H109.945Z" fill="#1E1E1C" />
+                        <path
+                            d="M138.84 0C150.576 0 152.093 5.1494 152.093 8.29716V8.97514C152.093 12.0906 150.608 17.353 138.84 17.353H137.742C125.958 17.353 124.473 12.0906 124.473 8.97514V8.29716C124.473 5.1494 125.958 0.0161482 137.742 0.0161482L138.84 0ZM144.893 8.44243C144.893 6.66678 143.65 4.48756 138.275 4.48756C132.803 4.48756 131.657 6.66678 131.657 8.44243V8.71685C131.657 10.4764 132.9 12.8331 138.275 12.8331C143.65 12.8331 144.893 10.5732 144.893 8.76528V8.44243Z"
+                            fill="#1E1E1C" />
+                        <path
+                            d="M191.286 10.7023L181.343 0.274414H189.656L194.951 6.05336L200.358 0.290552H207.961L198.228 10.7508V16.9979H191.286V10.7023Z"
+                            fill="#1E1E1C" />
+                        <path
+                            d="M168.832 0H167.88C157.145 0 154.998 4.69741 154.998 8.28101V8.91056C154.998 12.4296 157.323 17.3369 167.266 17.3369H167.831C173.497 17.3369 175.773 15.4321 176.484 14.7057C176.823 15.3191 177.21 16.4813 177.339 17.014H181.714V7.60304H168.251V10.8638H174.627C174.627 11.3965 173.11 12.9461 168.413 12.9461C163.909 12.9461 162.182 10.8638 162.182 8.71685V8.47472C162.182 6.27936 163.57 4.34229 168.461 4.34229C172.932 4.34229 173.982 5.61753 174.272 6.23094H181.585C181.391 3.89031 179.648 0 168.832 0Z"
+                            fill="#1E1E1C" />
+                    </svg>
+                    <p class="restore-title">Ошибка!</p>
+                    <p class="restore-text">Данный почтовый адрес не зарегистрирован!</p>
+                    <button class="btn btn--restore">Назад</button>
+                </div>
             </div>
         </div>
         <div class="modal-wrapper__left-menu hidden animation">
@@ -522,6 +517,257 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <div class="modal-wrapper__sign-up hidden animation">
+            <div class="modal-wrapper__sign-up-body">
+                <div class="sign-up__top">
+                    <button class="sign-up-btn sign-up-btn--active">Вход</button>
+                    <button class="sign-up-btn openCheck">Регистрация</button>
+                    <button class="modal-wrapper__close modal-wrapper__close--sign-up">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L17.5 17.5M17.5 1L1 17.5" stroke="#212121" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="sign-up__option">
+                    <p class="option-text">Войти через</p>
+                    <div class="sign-up__option-inner">
+                        <button class="sign-up__option-btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.92188 10.5C4.92188 9.45953 5.20853 8.48487 5.70654 7.65033V4.11035H2.16657C0.761578 5.93505 0 8.15888 0 10.5C0 12.8411 0.761578 15.0649 2.16657 16.8896H5.70654V13.3496C5.20853 12.5151 4.92188 11.5404 4.92188 10.5Z"
+                                    fill="#FBBD00" />
+                                <path
+                                    d="M10.5 16.078L8.03906 18.539L10.5 20.9999C12.8411 20.9999 15.0649 20.2383 16.8896 18.8333V15.2971H13.3534C12.5116 15.7969 11.5328 16.078 10.5 16.078Z"
+                                    fill="#0F9D58" />
+                                <path
+                                    d="M5.70648 13.3496L2.1665 16.8896C2.44467 17.2509 2.74757 17.5968 3.07533 17.9246C5.05852 19.9078 7.69529 21 10.4999 21V16.0781C8.46458 16.0781 6.68068 14.9822 5.70648 13.3496Z"
+                                    fill="#31AA52" />
+                                <path
+                                    d="M21 10.5001C21 9.86132 20.9422 9.22131 20.8281 8.59796L20.7357 8.09351H10.5V13.0154H15.4814C14.9977 13.9777 14.2539 14.7627 13.3534 15.2974L16.8896 18.8336C17.2508 18.5554 17.5968 18.2525 17.9246 17.9248C19.9078 15.9416 21 13.3048 21 10.5001Z"
+                                    fill="#3C79E6" />
+                                <path
+                                    d="M14.4443 6.55565L14.8794 6.99066L18.3597 3.5104L17.9246 3.07539C15.9415 1.09221 13.3047 0 10.5 0L8.03906 2.46094L10.5 4.92188C11.9899 4.92188 13.3907 5.50208 14.4443 6.55565Z"
+                                    fill="#CF2D48" />
+                                <path
+                                    d="M10.5 4.92187V0C7.69533 0 5.05856 1.09221 3.07533 3.07535C2.74757 3.40311 2.44467 3.74907 2.1665 4.11038L5.70648 7.65036C6.68073 6.01781 8.46462 4.92187 10.5 4.92187Z"
+                                    fill="#EB4132" />
+                            </svg>
+                            Google</button>
+                        <button class="sign-up__option-btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.5 21C16.299 21 21 16.299 21 10.5C21 4.70101 16.299 0 10.5 0C4.70101 0 0 4.70101 0 10.5C0 16.299 4.70101 21 10.5 21Z"
+                                    fill="#3B5998" />
+                                <path
+                                    d="M13.1397 10.9111H11.2661V17.7751H8.42747V10.9111H7.07739V8.4988H8.42747V6.93779C8.42747 5.82149 8.95773 4.07349 11.2914 4.07349L13.3941 4.08228V6.42381H11.8684C11.6182 6.42381 11.2663 6.54884 11.2663 7.08135V8.50105H13.3877L13.1397 10.9111Z"
+                                    fill="white" />
+                            </svg>
+                            Facebook</button>
+                    </div>
+                </div>
+                <div class="sign-up__form">
+                    <input class="sign-up__input" type="email" placeholder="Электронная почта">
+                    <input class="sign-up__input" type="password" placeholder="Пароль">
+                    <button class="btn" type="submit">Войти</button>
+                    <a href="#" class="sign-up__link openPassword">Забыли пароль?</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-wrapper__check hidden animation">
+            <div class="modal-wrapper__check-body">
+                <div class="sign-up__top">
+                    <button class="sign-up-btn openSignUp">Вход</button>
+                    <button class="sign-up-btn sign-up-btn--active">Регистрация</button>
+                    <button class="modal-wrapper__close modal-wrapper__close--sign-up">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L17.5 17.5M17.5 1L1 17.5" stroke="#212121" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="sign-up__form">
+                    <input class="sign-up__input" type="email" placeholder="Электронная почта">
+                    <input class="sign-up__input" type="password" placeholder="Пароль">
+                    <button class="btn" type="submit">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-wrapper__password hidden animation">
+            <div class="modal-wrapper__password-body">
+                <div class="sign-up__top">
+                    <button class="sign-up-btn sign-up-btn--active">Вход</button>
+                    <button class="sign-up-btn openCheck">Регистрация</button>
+                    <button class="modal-wrapper__close modal-wrapper__close--sign-up">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L17.5 17.5M17.5 1L1 17.5" stroke="#212121" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="option-text option-text--password">Забыли пароль?</p>
+                <div class="sign-up__form sign-up__form--password">
+                    <input class="sign-up__input" type="email" placeholder="Электронная почта">
+                    <button class="btn" type="submit">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-wrapper__cabinet hidden animation">
+            <div class="modal-wrapper__cabinet-body">
+                <div class="cabinet-top">
+                    <button class="sign-up-btn sign-up-btn--active">Личный кабинет</button>
+                    <button class="modal-wrapper__close modal-wrapper__close--sign-up">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L17.5 17.5M17.5 1L1 17.5" stroke="#212121" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="cabinet-inner">
+                    <div class="cabinet-item cabinet-item--margin">
+                        <p class="cabinet-item__text">Бонусные баллы</p>
+                        <p class="cabinet-item__num">289</p>
+                    </div>
+                    <div class="cabinet-item">
+                        <p class="cabinet-item__text">Мои данные </p>
+                        <p class="cabinet-item__num">2</p>
+                    </div>
+                    <div class="cabinet-item">
+                        <p class="cabinet-item__text">Мои заказы</p>
+                        <p class="cabinet-item__num">15</p>
+                    </div>
+                    <div class="cabinet-item">
+                        <p class="cabinet-item__text">Избранное</p>
+                        <p class="cabinet-item__num">2</p>
+                    </div>
+                    <div class="cabinet-item cabinet-item--margin">
+                        <p class="cabinet-item__text">Выход</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-wrapper__favorites hidden animation">
+            <div class="modal-wrapper__favorites-body">
+                <div class="cabinet-top">
+                    <button class="sign-up-btn sign-up-btn--active">Избранное</button>
+                    <button class="modal-wrapper__close modal-wrapper__close--sign-up">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L17.5 17.5M17.5 1L1 17.5" stroke="#212121" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="favorites-inner">
+                    <div class="favorites-item">
+                        <div class="favorites-img">
+                            <img src="/img/modal/fav.jpg" alt="">
+                        </div>
+                        <div class="favotites-text">
+                            <p class="favorites-text__item favorites-text__item--bold">
+                                Куртка Название хорошая
+                            </p>
+                            <div class="favorites-text__wrap">
+                                <p class="favorites-text__item">Размер: М</p>
+                                <p class="favorites-text__item">Цвет: черный</p>
+                            </div>
+                            <p class="favorites-text__item favorites-text__item--bold">32 000 ₽</p>
+                            <div class="favorites-icons--mobile">
+                                <svg class="favorites-icon--mr" width="19" height="17" viewBox="0 0 19 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                        <path
+                                            d="M9.17492 16.5145C8.93108 16.5145 8.69592 16.4223 8.51296 16.2547C7.82088 15.6232 7.1539 15.03 6.56552 14.5064L6.56251 14.5036C4.83717 12.9689 3.34733 11.6436 2.31039 10.3383C1.15169 8.87898 0.611816 7.49508 0.611816 5.98341C0.611816 4.51468 1.09449 3.15977 1.97054 2.16793C2.85696 1.16422 4.07352 0.611572 5.39612 0.611572C6.38455 0.611572 7.29004 0.937646 8.08714 1.58107C8.48921 1.90574 8.85381 2.30304 9.17492 2.76666C9.49637 2.30304 9.86064 1.90574 10.263 1.58107C11.0598 0.937646 11.9653 0.611572 12.9537 0.611572C14.2763 0.611572 15.4929 1.16422 16.3793 2.16793C17.2557 3.15977 17.738 4.51468 17.738 5.98341C17.738 7.49508 17.1985 8.87898 16.0395 10.3383C15.0029 11.644 13.513 12.9692 11.7877 14.5036C11.1983 15.028 10.53 15.6221 9.83656 16.2551C9.65392 16.4223 9.41877 16.5145 9.17492 16.5145ZM5.39612 1.65857C4.35684 1.65857 3.40218 2.09147 2.70777 2.87733C2.00299 3.67541 1.61464 4.77827 1.61464 5.98306C1.61464 7.25454 2.06754 8.39161 3.08241 9.67007C4.06348 10.9056 5.52289 12.2036 7.21277 13.7065L7.21578 13.7093C7.8065 14.2348 8.47616 14.8304 9.17325 15.4664C9.87436 14.8293 10.545 14.2327 11.1371 13.7062C12.8266 12.2033 14.286 10.9056 15.2671 9.66973C16.282 8.39126 16.7349 7.25419 16.7349 5.98272C16.7349 4.77757 16.3465 3.67471 15.6417 2.87698C14.9473 2.09078 13.9927 1.65822 12.9537 1.65822C12.1924 1.65822 11.4937 1.91063 10.8765 2.40882C10.3266 2.85289 9.9436 3.41427 9.71881 3.80703C9.60341 4.00917 9.40004 4.12961 9.17492 4.12961C8.94981 4.12961 8.74643 4.00917 8.63103 3.80703C8.40659 3.41427 8.02359 2.85289 7.47334 2.40882C6.85619 1.91133 6.15743 1.65857 5.39612 1.65857Z"
+                                            fill="#212121" stroke="#212121" stroke-width="0.305825" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="18.3495" height="16.5146" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg width="16" height="20" viewBox="0 0 16 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.9961 19.2988L14.4889 6.11445C14.4518 5.7918 14.1588 5.54727 13.8089 5.54727H11.7746V3.50234C11.775 1.57109 10.0817 0 8.00018 0C5.91868 0 4.22536 1.57109 4.22536 3.50234V5.54688H2.19101C1.84157 5.54688 1.54812 5.7918 1.51107 6.11406L0.00383849 19.2988C-0.038684 19.673 0.277498 20 0.683778 20H15.3166C15.722 20 16.039 19.6738 15.9961 19.2988ZM5.59239 3.50234C5.59239 2.27031 6.67272 1.26836 8.00018 1.26836C9.32764 1.26836 10.408 2.2707 10.408 3.50234V5.54688H5.59239V3.50234ZM1.44371 18.7316L2.80569 6.81562H13.1942L14.5562 18.7316H1.44371Z"
+                                        fill="#212121" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favorites-item">
+                        <div class="favorites-img">
+                            <img src="/img/modal/fav.jpg" alt="">
+                        </div>
+                        <div class="favotites-text">
+                            <p class="favorites-text__item favorites-text__item--bold">
+                                Куртка Название хорошая
+                            </p>
+                            <div class="favorites-text__wrap">
+                                <p class="favorites-text__item">Размер: М</p>
+                                <p class="favorites-text__item">Цвет: черный</p>
+                            </div>
+                            <p class="favorites-text__item favorites-text__item--bold">32 000 ₽</p>
+                            <div class="favorites-icons--mobile">
+                                <svg class="favorites-icon--mr" width="19" height="17" viewBox="0 0 19 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                        <path
+                                            d="M9.17492 16.5145C8.93108 16.5145 8.69592 16.4223 8.51296 16.2547C7.82088 15.6232 7.1539 15.03 6.56552 14.5064L6.56251 14.5036C4.83717 12.9689 3.34733 11.6436 2.31039 10.3383C1.15169 8.87898 0.611816 7.49508 0.611816 5.98341C0.611816 4.51468 1.09449 3.15977 1.97054 2.16793C2.85696 1.16422 4.07352 0.611572 5.39612 0.611572C6.38455 0.611572 7.29004 0.937646 8.08714 1.58107C8.48921 1.90574 8.85381 2.30304 9.17492 2.76666C9.49637 2.30304 9.86064 1.90574 10.263 1.58107C11.0598 0.937646 11.9653 0.611572 12.9537 0.611572C14.2763 0.611572 15.4929 1.16422 16.3793 2.16793C17.2557 3.15977 17.738 4.51468 17.738 5.98341C17.738 7.49508 17.1985 8.87898 16.0395 10.3383C15.0029 11.644 13.513 12.9692 11.7877 14.5036C11.1983 15.028 10.53 15.6221 9.83656 16.2551C9.65392 16.4223 9.41877 16.5145 9.17492 16.5145ZM5.39612 1.65857C4.35684 1.65857 3.40218 2.09147 2.70777 2.87733C2.00299 3.67541 1.61464 4.77827 1.61464 5.98306C1.61464 7.25454 2.06754 8.39161 3.08241 9.67007C4.06348 10.9056 5.52289 12.2036 7.21277 13.7065L7.21578 13.7093C7.8065 14.2348 8.47616 14.8304 9.17325 15.4664C9.87436 14.8293 10.545 14.2327 11.1371 13.7062C12.8266 12.2033 14.286 10.9056 15.2671 9.66973C16.282 8.39126 16.7349 7.25419 16.7349 5.98272C16.7349 4.77757 16.3465 3.67471 15.6417 2.87698C14.9473 2.09078 13.9927 1.65822 12.9537 1.65822C12.1924 1.65822 11.4937 1.91063 10.8765 2.40882C10.3266 2.85289 9.9436 3.41427 9.71881 3.80703C9.60341 4.00917 9.40004 4.12961 9.17492 4.12961C8.94981 4.12961 8.74643 4.00917 8.63103 3.80703C8.40659 3.41427 8.02359 2.85289 7.47334 2.40882C6.85619 1.91133 6.15743 1.65857 5.39612 1.65857Z"
+                                            fill="#212121" stroke="#212121" stroke-width="0.305825" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="18.3495" height="16.5146" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg width="16" height="20" viewBox="0 0 16 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.9961 19.2988L14.4889 6.11445C14.4518 5.7918 14.1588 5.54727 13.8089 5.54727H11.7746V3.50234C11.775 1.57109 10.0817 0 8.00018 0C5.91868 0 4.22536 1.57109 4.22536 3.50234V5.54688H2.19101C1.84157 5.54688 1.54812 5.7918 1.51107 6.11406L0.00383849 19.2988C-0.038684 19.673 0.277498 20 0.683778 20H15.3166C15.722 20 16.039 19.6738 15.9961 19.2988ZM5.59239 3.50234C5.59239 2.27031 6.67272 1.26836 8.00018 1.26836C9.32764 1.26836 10.408 2.2707 10.408 3.50234V5.54688H5.59239V3.50234ZM1.44371 18.7316L2.80569 6.81562H13.1942L14.5562 18.7316H1.44371Z"
+                                        fill="#212121" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favorites-item">
+                        <div class="favorites-img">
+                            <img src="/img/modal/fav.jpg" alt="">
+                        </div>
+                        <div class="favotites-text">
+                            <p class="favorites-text__item favorites-text__item--bold">
+                                Куртка Название хорошая
+                            </p>
+                            <div class="favorites-text__wrap">
+                                <p class="favorites-text__item">Размер: М</p>
+                                <p class="favorites-text__item">Цвет: черный</p>
+                            </div>
+                            <p class="favorites-text__item favorites-text__item--bold">32 000 ₽</p>
+                            <div class="favorites-icons--mobile">
+                                <svg class="favorites-icon--mr" width="19" height="17" viewBox="0 0 19 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                        <path
+                                            d="M9.17492 16.5145C8.93108 16.5145 8.69592 16.4223 8.51296 16.2547C7.82088 15.6232 7.1539 15.03 6.56552 14.5064L6.56251 14.5036C4.83717 12.9689 3.34733 11.6436 2.31039 10.3383C1.15169 8.87898 0.611816 7.49508 0.611816 5.98341C0.611816 4.51468 1.09449 3.15977 1.97054 2.16793C2.85696 1.16422 4.07352 0.611572 5.39612 0.611572C6.38455 0.611572 7.29004 0.937646 8.08714 1.58107C8.48921 1.90574 8.85381 2.30304 9.17492 2.76666C9.49637 2.30304 9.86064 1.90574 10.263 1.58107C11.0598 0.937646 11.9653 0.611572 12.9537 0.611572C14.2763 0.611572 15.4929 1.16422 16.3793 2.16793C17.2557 3.15977 17.738 4.51468 17.738 5.98341C17.738 7.49508 17.1985 8.87898 16.0395 10.3383C15.0029 11.644 13.513 12.9692 11.7877 14.5036C11.1983 15.028 10.53 15.6221 9.83656 16.2551C9.65392 16.4223 9.41877 16.5145 9.17492 16.5145ZM5.39612 1.65857C4.35684 1.65857 3.40218 2.09147 2.70777 2.87733C2.00299 3.67541 1.61464 4.77827 1.61464 5.98306C1.61464 7.25454 2.06754 8.39161 3.08241 9.67007C4.06348 10.9056 5.52289 12.2036 7.21277 13.7065L7.21578 13.7093C7.8065 14.2348 8.47616 14.8304 9.17325 15.4664C9.87436 14.8293 10.545 14.2327 11.1371 13.7062C12.8266 12.2033 14.286 10.9056 15.2671 9.66973C16.282 8.39126 16.7349 7.25419 16.7349 5.98272C16.7349 4.77757 16.3465 3.67471 15.6417 2.87698C14.9473 2.09078 13.9927 1.65822 12.9537 1.65822C12.1924 1.65822 11.4937 1.91063 10.8765 2.40882C10.3266 2.85289 9.9436 3.41427 9.71881 3.80703C9.60341 4.00917 9.40004 4.12961 9.17492 4.12961C8.94981 4.12961 8.74643 4.00917 8.63103 3.80703C8.40659 3.41427 8.02359 2.85289 7.47334 2.40882C6.85619 1.91133 6.15743 1.65857 5.39612 1.65857Z"
+                                            fill="#212121" stroke="#212121" stroke-width="0.305825" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="18.3495" height="16.5146" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg width="16" height="20" viewBox="0 0 16 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.9961 19.2988L14.4889 6.11445C14.4518 5.7918 14.1588 5.54727 13.8089 5.54727H11.7746V3.50234C11.775 1.57109 10.0817 0 8.00018 0C5.91868 0 4.22536 1.57109 4.22536 3.50234V5.54688H2.19101C1.84157 5.54688 1.54812 5.7918 1.51107 6.11406L0.00383849 19.2988C-0.038684 19.673 0.277498 20 0.683778 20H15.3166C15.722 20 16.039 19.6738 15.9961 19.2988ZM5.59239 3.50234C5.59239 2.27031 6.67272 1.26836 8.00018 1.26836C9.32764 1.26836 10.408 2.2707 10.408 3.50234V5.54688H5.59239V3.50234ZM1.44371 18.7316L2.80569 6.81562H13.1942L14.5562 18.7316H1.44371Z"
+                                        fill="#212121" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn--favorites">Продолжить покупки</button>
+                </div>
+                <a href="#" class="sign-up__link favorites__link--mobile openCabinet">Войти в личный кабинет</a>
             </div>
         </div>
         <div class="modal-wrapper__bg"></div>
