@@ -145,7 +145,6 @@ $(function() {
         passive: false
       });
     }
-
   };
 
   openSignUp = document.querySelector('.openSignUp');
@@ -170,7 +169,6 @@ $(function() {
         passive: false
       });
     }
-
   };
 
   openCheck = document.querySelector('.openCheck');
@@ -195,7 +193,6 @@ $(function() {
         passive: false
       });
     }
-
   };
 
   openPassword = document.querySelector('.openPassword');
@@ -220,7 +217,6 @@ $(function() {
         passive: false
       });
     }
-
   };
 
   openCabinet = document.querySelector('.openCabinet');
@@ -245,7 +241,6 @@ $(function() {
         passive: false
       });
     }
-
   };
 
   openFavorites = document.querySelector('.openFavorites');
@@ -270,7 +265,53 @@ $(function() {
         passive: false
       });
     }
+  };
 
+  openBasket = document.querySelector('.openBasket');
+  basketModal = document.querySelector('.modal-wrapper__basket');
+
+  openBasket.addEventListener('click', function () {
+    openBaseModal();
+    basketModal.classList.remove('hidden');
+    setTimeout(function () {
+      basketModal.classList.remove('animation');
+    }, 20);
+  })
+
+  function closeBasketModal() {
+    if (!basketModal.classList.contains('hidden')) {
+      basketModal.classList.add('animation');    
+      basketModal.addEventListener('transitionend', function(e) {
+        basketModal.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+    }
+  };
+  openEmptyBasket = document.querySelector('.openEmptyBasket');
+  emptyBasketModal = document.querySelector('.modal-wrapper__empty-basket');
+
+  openEmptyBasket.addEventListener('click', function () {
+    openBaseModal();
+    emptyBasketModal.classList.remove('hidden');
+    setTimeout(function () {
+      emptyBasketModal.classList.remove('animation');
+    }, 20);
+  })
+
+  function closeEmptyBasketModal() {
+    if (!emptyBasketModal.classList.contains('hidden')) {
+      emptyBasketModal.classList.add('animation');    
+      emptyBasketModal.addEventListener('transitionend', function(e) {
+        emptyBasketModal.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+    }
   };
 
   function closeAllModal() {
@@ -282,6 +323,8 @@ $(function() {
     closePasswordModal();
     closeCabinetModal();
     closeFavoritesModal();
+    closeBasketModal();
+    closeEmptyBasketModal();
     closeBaseModal();
   };
 
