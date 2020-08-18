@@ -1,78 +1,165 @@
-$(function() {
+$(function () {
 
-	//Валидатор форм и маска для форм
-	const offerFormModal = $('.offer-form-modal')
-	offerFormModal.submit(function(e) {
-			e.preventDefault()
-	})
+  //Валидатор форм и маска для форм
+  const paymentForm = $('.payment-main-right')
+  paymentForm.submit(function (e) {
+    e.preventDefault()
+  })
 
-	offerFormModal.validate({
-			errorElement: "",
-			errorPlacement: (error, element) =>
-					error.appendTo(element.parent().parent()),
-			rules: {
-					tel: {
-							maskRu: true
-					}
-			},
-			messages: {
-					name: "",
-					tel: ""
-			},
-			submitHandler: function (form) {
-					const formInstance = $(form)
+  paymentForm.validate({
+    errorElement: "",
+    errorPlacement: (error, element) =>
+      error.appendTo(element.parent().parent()),
+    rules: {
+      tel: {
+        maskRu: true
+      },
+      email: {
+        maskEm: true
+      }
+    },
+    messages: {
+      name: "",
+      lastName: "",
+      tel: "",
+      email: "",
+      country: "",
+      city: "",
+      index: "",
+      street: "",
+      house: "",
+      apartment: ""
+    },
+    submitHandler: function (form) {
+      const formInstance = $(form)
 
-					console.log('submit')
-					$.ajax({
-							type: "POST",
-							url: "mail.php",
-							data: formInstance.serialize()
-					}).done(function() {
-							console.log('DONE')
-							formInput.val("");
-							formInput.siblings().removeClass('active')
-							$('.modal-wrapper-offer .success-message').addClass('show')
-					});
-					return false;
-			}
+      console.log('submit')
+      $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: formInstance.serialize()
+      }).done(function () {
+        console.log('DONE')
+        // formInput.val("");
+        // formInput.siblings().removeClass('active')
+        // $('.modal-wrapper-offer .success-message').addClass('show')
+      });
+      return false;
+    }
   });
-  
-	jQuery.validator.addMethod('maskRu', function(value, element) {
-			console.log(/\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value));
-			return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
-	});
-	$('[name="tel"]').mask("+7(999)999-9999",{autoclear: false});
 
-  $(window).on('resize', function(e){
-    // Переменная, по которой узнаем запущен слайдер или нет.
-    // Храним её в data
-    var init = $(".card-box").data('init-slider');
-    // Если мобильный
-    if(window.innerWidth < 992){
-      // Если слайдер не запущен
-      if(init != 1){
-        // Запускаем слайдер и записываем в data init-slider = 1
+  const contactForm = $('.contact-question__form')
+  contactForm.submit(function (e) {
+    e.preventDefault()
+  })
+
+  contactForm.validate({
+    errorElement: "",
+    errorPlacement: (error, element) =>
+      error.appendTo(element.parent().parent()),
+    rules: {
+      email: {
+        maskEm: true
+      }
+    },
+    messages: {
+      name: "",
+      email: "",
+      message: ""
+    },
+    submitHandler: function (form) {
+      const formInstance = $(form)
+      console.log('submit')
+      $.ajax({
+        url: "../mail.php",
+        data: formInstance.serialize()
+      }).done(function () {
+        console.log('DONE')
+        // formInput.val("");
+        // formInput.siblings().removeClass('active')
+        // $('.modal-wrapper-offer .success-message').addClass('show')
+      });
+      return false;
+    }
+  });
+
+  const passwordForm = $('.password-form')
+  passwordForm.submit(function (e) {
+    e.preventDefault()
+  })
+
+  passwordForm.validate({
+    errorElement: "",
+    errorPlacement: (error, element) =>
+      error.appendTo(element.parent().parent()),
+    rules: {
+      email: {
+        maskEm: true
+      }
+    },
+    messages: {
+      email: "",
+    },
+    submitHandler: function (form) {
+      const formInstance = $(form)
+      console.log('submit')
+      $.ajax({
+        // url: "../mail.php",
+        // data: formInstance.serialize()
+      }).done(function () {
+        console.log('DONE')
+        // formInput.val("");
+        // formInput.siblings().removeClass('active')
+        // $('.modal-wrapper-offer .success-message').addClass('show')
+      });
+      return false;
+    }
+  });
+
+  jQuery.validator.addMethod('maskRu', function (value, element) {
+    console.log(/\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value));
+    return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
+  });
+
+  jQuery.validator.addMethod('maskEm', function (value, element) {
+    return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value);
+  });
+
+  $('[name="tel"]').mask("+7(999)999-9999", {
+    autoclear: false
+  });
+
+  $(window).on('resize', function (e) {
+    var init = $(".product-left").data('init-slider');
+    if (window.innerWidth < 992) {
+      if (init != 1) {
         $('.product-left').slick({
           arrows: false,
           dots: true
-        }).data({'init-slider': 1});
+        }).data({
+          'init-slider': 1
+        });
       }
-    }
-    // Если десктоп
-    else {
-      // Если слайдер запущен
-      if(init == 1){
-        // Разрушаем слайдер и записываем в data init-slider = 0
-        $('#card-box').slick('unslick').data({'init-slider': 0});
+    } else {
+      if (init == 1) {
+        $('.product-left').slick('unslick').data({
+          'init-slider': 0
+        });
       }
     }
   }).trigger('resize');
 
 });
 
+$('document').ready(function () {
+  $('.btn--payment').on('click', function () {
+    $('.sign-up__input--payment').addClass('req');
+  });
+});
+
 //Модальные окна на Pure Js
-(function() {
-  
+(function () {
+
   //Вызов окна колбека
   openRestore = document.querySelector('.openRestore');
   restoreModal = document.querySelector('.modal-wrapper__restore');
@@ -87,8 +174,8 @@ $(function() {
 
   function closeRestorePopup() {
     if (!restoreModal.classList.contains('hidden')) {
-      restoreModal.classList.add('animation');    
-      restoreModal.addEventListener('transitionend', function(e) {
+      restoreModal.classList.add('animation');
+      restoreModal.addEventListener('transitionend', function (e) {
         restoreModal.classList.add('hidden');
       }, {
         capture: false,
@@ -111,8 +198,8 @@ $(function() {
 
   function closeErrorPopup() {
     if (!errorModal.classList.contains('hidden')) {
-      errorModal.classList.add('animation');    
-      errorModal.addEventListener('transitionend', function(e) {
+      errorModal.classList.add('animation');
+      errorModal.addEventListener('transitionend', function (e) {
         errorModal.classList.add('hidden');
       }, {
         capture: false,
@@ -136,8 +223,8 @@ $(function() {
 
   function closeleftMenuModal() {
     if (!leftMenuModal.classList.contains('hidden')) {
-      leftMenuModal.classList.add('animation');    
-      leftMenuModal.addEventListener('transitionend', function(e) {
+      leftMenuModal.classList.add('animation');
+      leftMenuModal.addEventListener('transitionend', function (e) {
         leftMenuModal.classList.add('hidden');
       }, {
         capture: false,
@@ -160,8 +247,8 @@ $(function() {
 
   function closeSignUpModal() {
     if (!signUpModal.classList.contains('hidden')) {
-      signUpModal.classList.add('animation');    
-      signUpModal.addEventListener('transitionend', function(e) {
+      signUpModal.classList.add('animation');
+      signUpModal.addEventListener('transitionend', function (e) {
         signUpModal.classList.add('hidden');
       }, {
         capture: false,
@@ -184,8 +271,8 @@ $(function() {
 
   function closeCheckModal() {
     if (!checkModal.classList.contains('hidden')) {
-      checkModal.classList.add('animation');    
-      checkModal.addEventListener('transitionend', function(e) {
+      checkModal.classList.add('animation');
+      checkModal.addEventListener('transitionend', function (e) {
         checkModal.classList.add('hidden');
       }, {
         capture: false,
@@ -208,8 +295,8 @@ $(function() {
 
   function closePasswordModal() {
     if (!passwordModal.classList.contains('hidden')) {
-      passwordModal.classList.add('animation');    
-      passwordModal.addEventListener('transitionend', function(e) {
+      passwordModal.classList.add('animation');
+      passwordModal.addEventListener('transitionend', function (e) {
         passwordModal.classList.add('hidden');
       }, {
         capture: false,
@@ -232,8 +319,8 @@ $(function() {
 
   function closeCabinetModal() {
     if (!cabinetModal.classList.contains('hidden')) {
-      cabinetModal.classList.add('animation');    
-      cabinetModal.addEventListener('transitionend', function(e) {
+      cabinetModal.classList.add('animation');
+      cabinetModal.addEventListener('transitionend', function (e) {
         cabinetModal.classList.add('hidden');
       }, {
         capture: false,
@@ -256,8 +343,8 @@ $(function() {
 
   function closeFavoritesModal() {
     if (!favoritesModal.classList.contains('hidden')) {
-      favoritesModal.classList.add('animation');    
-      favoritesModal.addEventListener('transitionend', function(e) {
+      favoritesModal.classList.add('animation');
+      favoritesModal.addEventListener('transitionend', function (e) {
         favoritesModal.classList.add('hidden');
       }, {
         capture: false,
@@ -280,8 +367,8 @@ $(function() {
 
   function closeBasketModal() {
     if (!basketModal.classList.contains('hidden')) {
-      basketModal.classList.add('animation');    
-      basketModal.addEventListener('transitionend', function(e) {
+      basketModal.classList.add('animation');
+      basketModal.addEventListener('transitionend', function (e) {
         basketModal.classList.add('hidden');
       }, {
         capture: false,
@@ -303,8 +390,8 @@ $(function() {
 
   function closeEmptyBasketModal() {
     if (!emptyBasketModal.classList.contains('hidden')) {
-      emptyBasketModal.classList.add('animation');    
-      emptyBasketModal.addEventListener('transitionend', function(e) {
+      emptyBasketModal.classList.add('animation');
+      emptyBasketModal.addEventListener('transitionend', function (e) {
         emptyBasketModal.classList.add('hidden');
       }, {
         capture: false,
@@ -344,8 +431,8 @@ $(function() {
 
   function closeBaseModal() {
     body.classList.remove('noflow');
-    modalWrapper.classList.add('animation');    
-    modalWrapper.addEventListener('transitionend', function(e) {
+    modalWrapper.classList.add('animation');
+    modalWrapper.addEventListener('transitionend', function (e) {
       modalWrapper.classList.add('hidden');
     }, {
       capture: false,
@@ -354,7 +441,7 @@ $(function() {
     });
   };
 
-  for(let i = 0; i<modalWrapperClose.length; i++){
+  for (let i = 0; i < modalWrapperClose.length; i++) {
     modalWrapperClose[i].addEventListener('click', () => {
       closeAllModal();
     });
@@ -364,9 +451,9 @@ $(function() {
     closeAllModal();
   })
 
-  document.onkeydown = function(e) {
+  document.onkeydown = function (e) {
     e = e || window.event;
-    if (e.key=='Escape'||e.key=='Esc'||e.keyCode==27) {
+    if (e.key == 'Escape' || e.key == 'Esc' || e.keyCode == 27) {
       closeAllModal();
     }
   };

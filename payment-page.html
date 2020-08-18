@@ -27,25 +27,25 @@
 						<div class="payment-main__left">
 							<h2 class="payment-title__h2">Ваши данные</h2>
 						</div>
-						<div class="payment-main-right">
-							<input class="sign-up__input sign-up__input--payment" type="text" placeholder="Имя">
-							<input class="sign-up__input sign-up__input--payment" type="text" placeholder="Фамилия">
-							<input class="sign-up__input sign-up__input--payment" type="text" placeholder="Телефон">
+						<form class="payment-main-right">
+							<input class="sign-up__input sign-up__input--payment" type="text" placeholder="Имя" required>
+							<input class="sign-up__input sign-up__input--payment" type="text" placeholder="Фамилия" required>
+							<input class="sign-up__input sign-up__input--payment" type="tel" placeholder="Телефон" name="tel" data-rule-required="true" data-rule-minlength="10">
 							<input class="sign-up__input sign-up__input--payment" type="text"
-								placeholder="Электронная почта">
+								placeholder="Электронная почта" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
 
 							<h3 class="payment-title__h3">Адрес для доставки</h3>
 
-							<input class="sign-up__input sign-up__input--payment" type="text" placeholder="Страна">
-							<input class="sign-up__input sign-up__input--payment" type="text" placeholder="Город">
-							<input class="sign-up__input sign-up__input--payment" type="text"
-								placeholder="Почтовый код">
-							<input class="sign-up__input sign-up__input--payment" type="text" placeholder="Улица">
+							<input class="sign-up__input sign-up__input--payment" type="text" placeholder="Страна" required>
+							<input class="sign-up__input sign-up__input--payment" type="text" placeholder="Город" required>
+							<input class="sign-up__input sign-up__input--payment" type="number"
+								placeholder="Почтовый код" required>
+							<input class="sign-up__input sign-up__input--payment" type="text" placeholder="Улица" required>
 							<div class="payment-flex payment-flex--column">
 								<input class="sign-up__input sign-up__input--payment sign-up__input--payment40"
-									type="text" placeholder="Дом">
+									type="text" placeholder="Дом" required>
 								<input class="sign-up__input sign-up__input--payment sign-up__input--payment40"
-									type="text" placeholder="Квартира / офис">
+									type="text" placeholder="Квартира / офис" required>
 							</div>
 
 							<a href="#" class="sign-up__link sign-up__link--payment sign-up__link--payment__desktop">Добавить адрес</a>
@@ -57,7 +57,7 @@
 								<p class="payment-num">1800 ₽</p>
 							</div>
 
-						</div>
+						</form>
 					</div>
 					<div class="payment-confirm">
 						<div class="payment-main__left payment-mobile--hide">
@@ -160,7 +160,9 @@
 											32
 											000 ₽</p>
 										<div class="basket-priceandcount__wrap">
+											<span class="cabinet-top__minus"></span>
 											<p class="basket-count">1</p>
+											<span class="cabinet-top__plus"></span>
 											<svg width="14" height="13" viewBox="0 0 14 13" fill="none"
 												xmlns="http://www.w3.org/2000/svg">
 												<path d="M1 1L13 12M13 1L1 12" stroke="#212121" />
@@ -187,7 +189,9 @@
 											32
 											000 ₽</p>
 										<div class="basket-priceandcount__wrap">
+											<span class="cabinet-top__minus"></span>
 											<p class="basket-count">1</p>
+											<span class="cabinet-top__plus"></span>
 											<svg width="14" height="13" viewBox="0 0 14 13" fill="none"
 												xmlns="http://www.w3.org/2000/svg">
 												<path d="M1 1L13 12M13 1L1 12" stroke="#212121" />
@@ -214,7 +218,9 @@
 											32
 											000 ₽</p>
 										<div class="basket-priceandcount__wrap">
+											<span class="cabinet-top__minus"></span>
 											<p class="basket-count">1</p>
+											<span class="cabinet-top__plus"></span>
 											<svg width="14" height="13" viewBox="0 0 14 13" fill="none"
 												xmlns="http://www.w3.org/2000/svg">
 												<path d="M1 1L13 12M13 1L1 12" stroke="#212121" />
