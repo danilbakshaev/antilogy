@@ -354,16 +354,18 @@ $('document').ready(function () {
     }
   };
 
-  openBasket = document.querySelector('.openBasket');
+  openBasket = document.querySelectorAll('.openBasket');
   basketModal = document.querySelector('.modal-wrapper__basket');
 
-  openBasket.addEventListener('click', function () {
-    openBaseModal();
-    basketModal.classList.remove('hidden');
-    setTimeout(function () {
-      basketModal.classList.remove('animation');
-    }, 20);
-  })
+  for (let i = 0; i < openBasket.length; i++) {
+    openBasket[i].addEventListener('click', () => {
+      openBaseModal();
+      basketModal.classList.remove('hidden');
+      setTimeout(function () {
+        basketModal.classList.remove('animation');
+      }, 20);
+    });
+  }
 
   function closeBasketModal() {
     if (!basketModal.classList.contains('hidden')) {
