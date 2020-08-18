@@ -1391,6 +1391,8 @@ img {
 
 .brand-svg {
   margin-top: 64px;
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 992px) {
