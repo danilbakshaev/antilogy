@@ -795,6 +795,16 @@ body {
   position: relative;
 }
 
+.header-desktop__menu-item path:hover{
+  fill: #9966FF;
+}
+
+// .header-desktop__menu-item--circle,
+// path,
+// .header-desktop__menu-item--circle::after:hover{
+//   fill: #9966FF;
+// }
+
 .header-desktop__menu-item--circle::after {
   content: '';
   position: absolute;
@@ -804,6 +814,20 @@ body {
   height: 16px;
   border-radius: 100%;
   background-color: #1E1E1C;
+  transition: all 0.2s linear;
+}
+
+.header-desktop__menu-item path{
+  transition: all 0.2s linear;
+}
+
+.header-desktop__menu-item.header-desktop__menu-item--circle:hover::after{
+  background: #9966FF;
+}
+
+.header-desktop__menu-item:hover path{
+  fill: #9966FF;
+  stroke: #9966FF;
 }
 
 .header-desktop__menu-span {
@@ -824,6 +848,12 @@ body {
   align-items: center;
   letter-spacing: 0.02em;
   color: #212121;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+.header-desktop__menu-text:hover{
+  color: #9966FF;
 }
 
 .header-desktop__menu-btn {
@@ -831,13 +861,13 @@ body {
   background: none;
   padding: 0;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-color: transparent;
   transition: all .2s linear;
 }
 
 .header-desktop__menu-btn:hover {
-  text-decoration-color: #212121;
+  color: #9966FF;
 }
 
 .header-main {
@@ -863,7 +893,7 @@ body {
 }
 
 .header-leftmenu__item a {
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-color: transparent;
   transition: all .2s linear;
   font-size: 14px;
@@ -873,7 +903,7 @@ body {
 }
 
 .header-leftmenu__item a:hover {
-  text-decoration-color: #626262;
+  color: #9966FF;
 }
 
 .header-leftmenu__item:last-child {
@@ -1112,7 +1142,7 @@ body {
 
 .btn:hover {
   background: linear-gradient(99.65deg, #B16EE7 19.65%, #76B5FF 87.44%);
-  color: #000;
+  color: #fff;
 }
 
 .top-look__btn {
@@ -1356,6 +1386,7 @@ body {
   margin-top: 64px;
   width: 100%;
   height: auto;
+  max-width: 1230px;
 }
 
 @media screen and (max-width: 992px) {
@@ -1999,6 +2030,13 @@ footer {
   color: #212121;
   margin-right: 3px;
   cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.size__item:hover{
+  background: linear-gradient(112.61deg, #9966FF 20.22%, #9795F0 97.08%);
+  color: #fff;
+  border: none;
 }
 
 .size__item--active {
@@ -2242,6 +2280,16 @@ footer {
   cursor: pointer;
 }
 
+.sign-up-btn--basket{
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.sign-up-btn--like{
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .sign-up-btn:last-child {
   margin-right: 0;
 }
@@ -2253,7 +2301,7 @@ footer {
 .sign-up-btn--active::after {
   position: absolute;
   content: '';
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #9966FF;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -2671,6 +2719,11 @@ footer {
   line-height: 150%;
   color: #212121;
   margin-bottom: 20px;
+  transition: all 0.2s linear;
+}
+
+.user-page__aside-text:hover{
+  color: #9966FF;
 }
 
 .user-page__aside-text:last-child {
@@ -2685,7 +2738,7 @@ footer {
 .user-page__aside-text--active::after {
   content: '';
   position: absolute;
-  border-bottom: 2px solid #212121;
+  border-bottom: 2px solid #9966FF;
   width: 100%;
   left: 0;
   bottom: 0;
@@ -3289,6 +3342,14 @@ footer {
 .basket-priceandcount__wrap {
   display: flex;
   align-items: center;
+}
+
+.basket-priceandcount__wrap path{
+  transition: all 0.2s linear;
+}
+
+.basket-priceandcount__wrap path:hover{
+  stroke: #9966FF;
 }
 
 .basket-bottom {
