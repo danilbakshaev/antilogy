@@ -6,6 +6,11 @@ $(function () {
     e.preventDefault()
   })
 
+
+  
+
+
+
   paymentForm.validate({
     errorElement: "",
     errorPlacement: (error, element) =>
