@@ -1112,7 +1112,6 @@ body {
 
 .btn:hover {
   background: linear-gradient(99.65deg, #B16EE7 19.65%, #76B5FF 87.44%);
-  color: #000;
 }
 
 .top-look__btn {
@@ -2233,13 +2232,14 @@ footer {
 .sign-up-btn {
   border: none;
   background: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 150%;
   color: #212121;
   padding: 0;
   margin-right: 15px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .sign-up-btn:last-child {
@@ -2250,14 +2250,14 @@ footer {
   position: relative;
 }
 
-.sign-up-btn--active::after {
-  position: absolute;
-  content: '';
-  border-bottom: 1px solid #000;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-}
+// .sign-up-btn--active::after {
+//   position: absolute;
+//   content: '';
+//   border-bottom: 1px solid #000;
+//   width: 100%;
+//   bottom: 0;
+//   left: 0;
+// }
 
 .sign-up__option {
   margin-top: 48px;
