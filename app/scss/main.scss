@@ -2271,13 +2271,14 @@ footer {
 .sign-up-btn {
   border: none;
   background: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 150%;
   color: #212121;
   padding: 0;
   margin-right: 15px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .sign-up-btn--basket{
@@ -2306,6 +2307,7 @@ footer {
   bottom: 0;
   left: 0;
 }
+
 
 .sign-up__option {
   margin-top: 48px;
