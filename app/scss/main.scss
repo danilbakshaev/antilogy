@@ -1119,6 +1119,7 @@ body {
 /* top-look */
 .wrapper-right {
   margin-left: 328px;
+  overflow-x: hidden;
 }
 
 .top-look {
@@ -1252,7 +1253,7 @@ body {
   }
 
   .top-look__btn {
-    width: calc(100% - 32px);
+    width: 100%;
     margin-top: 60px;
   }
 
@@ -1428,6 +1429,14 @@ body {
   padding-bottom: 137px;
 }
 
+.brand__wrap-svg {
+  width: 100%;
+  text-align: center;
+  svg {
+    width: 100%;
+  }
+}
+
 .brand--mobile {
   display: none;
 }
@@ -1448,7 +1457,7 @@ body {
 
 .brand-svg {
   margin-top: 64px;
-  width: 100%;
+  // width: 100%;
   height: auto;
   max-width: 1230px;
 }
@@ -1621,6 +1630,7 @@ footer {
 
   .footer-top__col1-social {
     margin-bottom: 30px;
+    margin-right: -13px;
   }
 
   .footer-col__text--mobile {
