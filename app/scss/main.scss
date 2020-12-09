@@ -4131,3 +4131,90 @@ input::-webkit-inner-spin-button {
     display: none;
   }
 }
+
+
+#cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a {
+  border: 0 none;
+  box-sizing: border-box;
+  display: block;
+  line-height: 1;
+  list-style: none outside none;
+  margin: 0;
+  // padding: 0;
+  position: relative;
+}
+#cssmenu {
+  width: 60px;
+  top: 3px;
+  position: absolute;
+  left: -80px;
+}
+#cssmenu ul ul {
+  display: none;
+  transform: rotate(90deg);
+}
+
+.holder {
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+}
+.holder:after, .holder:before {
+  content: "";
+  display: block;
+  height: 6px;
+  position: absolute;
+  right: -15px;
+  // -webkit-transform: rotate(-135deg);
+  // -moz-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  width: 6px;
+  z-index: 10;
+}
+
+
+.holder:before {
+  border-left-color: inherit;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-top-color: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  top: 5px;
+}
+#cssmenu ul ul li a {
+  cursor: pointer;
+  font-size: 13px;
+  padding: 10px 20px;
+  text-decoration: none;
+  z-index: 1;
+  transform: rotate(-90deg);
+}
+
+#cssmenu ul ul ul li a {
+  padding-left: 30px;
+}
+
+
+#cssmenu ul ul li.has-sub > a:after {
+  content: "";
+  display: block;
+  height: 5px;
+  position: absolute;
+  right: 20px;
+  top: 11.5px;
+  transform: rotate(-90deg);
+  width: 5px;
+  z-index: 10;
+}
+
+#menu{
+position: absolute;
+top: -111px;
+left: -114px;
+display: none;
+}
+
+
