@@ -793,6 +793,9 @@ body {
   background-color: #fff;
   height: 100%;
   width: 295px;
+  a {
+    display: flex;
+  }
 }
 
 .header-desktop__menu {
@@ -899,14 +902,20 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 12px;
-  padding-right: 45px;
+  // padding-right: 45px;
   width: 295px;
   margin-right: 40px;
   position: fixed;
-  top: 54px;
+  // top: 54px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
   z-index: 9999;
   background: white;
-  left: 0;
+  overflow-y: auto;
+  // height: 580px;
+  // max-height: 100%;
 }
 
 .header__wrapper {
