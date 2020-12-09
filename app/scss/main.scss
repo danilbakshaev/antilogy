@@ -1059,9 +1059,9 @@ body {
   content: "";
   background: linear-gradient(92.38deg, #8ec5fc 23.68%, #ddffd2 117.4%);
   bottom: -38px;
-  right: -50px;
-  width: 100%;
-  height: 90px;
+  left: 37px;
+  width: calc(100% - 37px);
+  height: 100%;
   z-index: -1;
 }
 
@@ -1144,7 +1144,7 @@ body {
 
 /* top-look */
 .wrapper-right {
-  margin-left: 328px;
+  // margin-left: 328px;
   overflow-x: hidden;
 }
 
@@ -1168,6 +1168,7 @@ body {
 
 .top-look__inner {
   display: flex;
+  justify-content: center;
   margin-top: 56px;
 }
 
@@ -1194,7 +1195,7 @@ body {
   width: 100%;
   height: 100%;
   bottom: -30px;
-  right: -40px;
+  right: -26px;
   z-index: -1;
 }
 
@@ -1270,7 +1271,7 @@ body {
     width: 100%;
     height: 100%;
     bottom: -15px;
-    right: -40px;
+    right: -26px;
     z-index: -1;
   }
 
@@ -1309,6 +1310,7 @@ body {
 .jewerly__inner {
   margin-top: 34px;
   display: flex;
+  justify-content: center;
 }
 
 .jewerly__item {
