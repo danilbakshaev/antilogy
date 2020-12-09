@@ -774,7 +774,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 28px;
-  position: fixed;
+  position: sticky;
   width: 100%;
   z-index: 999;
   // max-width: 1719px;
@@ -791,7 +791,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  // background-color: #fff;
   height: 100%;
   width: 295px;
   a {
@@ -820,6 +820,7 @@ body {
 
 .header-desktop__menu-item path:hover{
   fill: #9966FF;
+  stroke: #9966FF;
 }
 
 // .header-desktop__menu-item--circle,
@@ -851,6 +852,10 @@ body {
 .header-desktop__menu-item:hover path{
   fill: #9966FF;
   stroke: #9966FF;
+}
+
+.header-desktop__menu-item:hover .none-stroke{
+  fill: none;
 }
 
 .header-desktop__menu-span {
@@ -899,14 +904,31 @@ body {
   height: 759px;
 }
 
+.header__left-menu{
+  position: sticky;
+  top: 0%;
+}
+
+.header__wrap{
+  display: flex;
+}
+
+.header__left{
+  width: 30%;
+}
+
+.header__right{
+  width: 70%;
+}
+
 .header-leftmenu {
   display: flex;
   justify-content: center;
   padding-top: 12px;
   // padding-right: 45px;
   width: 295px;
-  margin-right: 40px;
-  position: fixed;
+  // margin-right: 40px;
+  // position: fixed;
   // top: 54px;
   left: 0;
   top: 0;
@@ -914,7 +936,6 @@ body {
   height: 100%;
   z-index: 9999;
   background: white;
-  overflow-y: auto;
   // height: 580px;
   // max-height: 100%;
 }
@@ -993,9 +1014,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  margin-top: -100px;
-  margin-right: -60px;
+  min-height: 759px;
   position: relative;
+  margin-top: -55px;
 }
 
 .header-image__texts {
@@ -1087,7 +1108,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 19px 0;
+    padding: 19px 10px;
   }
 
   .header-mobile__main {
@@ -1107,6 +1128,10 @@ body {
 
   .header-image--mobile {
     margin-top: 0;
+  }
+
+  .header__wrap{
+    display: none;
   }
 }
 
@@ -4148,88 +4173,42 @@ input::-webkit-inner-spin-button {
 }
 
 
-#cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a {
-  border: 0 none;
-  box-sizing: border-box;
-  display: block;
-  line-height: 1;
-  list-style: none outside none;
+
+.menu_body {
+  display:none;
   margin: 0;
-  // padding: 0;
-  position: relative;
+  padding: 0;
 }
-#cssmenu {
-  width: 60px;
-  top: 3px;
+
+.menu_body-inner{
+  display: flex;
+}
+
+.menu_body li{
+  list-style: none;
+  margin-right: 10px;
+}
+
+.container11{
   position: absolute;
-  left: -80px;
+  right: 215px;
+  top: -1px;
+  display: flex;
 }
-#cssmenu ul ul {
-  display: none;
+
+.menu_head{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu_head-svg{
+  margin-left: 5px;
+  transform: rotate(0deg);
+  transition: transform 1s ease;
+}
+
+.rotate {
   transform: rotate(90deg);
 }
-
-.holder {
-  height: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 0;
-}
-.holder:after, .holder:before {
-  content: "";
-  display: block;
-  height: 6px;
-  position: absolute;
-  right: -15px;
-  // -webkit-transform: rotate(-135deg);
-  // -moz-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-  width: 6px;
-  z-index: 10;
-}
-
-
-.holder:before {
-  border-left-color: inherit;
-  border-left-style: solid;
-  border-left-width: 2px;
-  border-top-color: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  top: 5px;
-}
-#cssmenu ul ul li a {
-  cursor: pointer;
-  font-size: 13px;
-  padding: 10px 20px;
-  text-decoration: none;
-  z-index: 1;
-  transform: rotate(-90deg);
-}
-
-#cssmenu ul ul ul li a {
-  padding-left: 30px;
-}
-
-
-#cssmenu ul ul li.has-sub > a:after {
-  content: "";
-  display: block;
-  height: 5px;
-  position: absolute;
-  right: 20px;
-  top: 11.5px;
-  transform: rotate(-90deg);
-  width: 5px;
-  z-index: 10;
-}
-
-#menu{
-position: absolute;
-top: -111px;
-left: -114px;
-display: none;
-}
-
 
