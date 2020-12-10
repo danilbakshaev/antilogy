@@ -1153,7 +1153,9 @@ body {
 
 /* top-look */
 .wrapper-right {
-  // margin-left: 328px;
+  width: calc(100% - 295px);
+  margin-left: 295px;
+  padding: 0px 20px;
   overflow-x: hidden;
 }
 
@@ -1319,7 +1321,6 @@ body {
 .jewerly__inner {
   margin-top: 34px;
   display: flex;
-  justify-content: center;
 }
 
 .jewerly__item {
@@ -1423,6 +1424,10 @@ body {
 }
 
 @media screen and (max-width: 992px) {
+  .wrapper-right {
+    width: auto;
+    padding: 0;
+  }
   .jewerly {
     display: none;
   }
