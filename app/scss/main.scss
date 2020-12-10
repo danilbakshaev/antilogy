@@ -774,7 +774,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 28px;
-  position: sticky;
+  position: fixed;
   width: 100%;
   z-index: 999;
   // max-width: 1719px;
@@ -915,10 +915,14 @@ body {
 
 .header__left{
   width: 30%;
+  position: absolute;
+  left: 0;
 }
 
 .header__right{
-  width: 70%;
+  width: calc(100% - 295px);
+  position: absolute;
+  right: 0;
 }
 
 .header-leftmenu {
@@ -936,6 +940,7 @@ body {
   height: 100%;
   z-index: 9999;
   background: white;
+  position: sticky;
   // height: 580px;
   // max-height: 100%;
 }
@@ -1131,6 +1136,10 @@ body {
   }
 
   .header__wrap{
+    display: none;
+  }
+
+  .header-leftmenu{
     display: none;
   }
 }
