@@ -1729,6 +1729,7 @@ footer {
 
 .lookbook {
   padding: 24px 0 93px;
+  overflow-x: hidden;
 }
 
 .lookbook__item {
@@ -1985,6 +1986,14 @@ footer {
 
   .lookbook__select svg {
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .lookbook__info--btn {
+    width: 100%;
+    // margin-left: 10px;
+    // margin-right: 10px;
   }
 }
 
