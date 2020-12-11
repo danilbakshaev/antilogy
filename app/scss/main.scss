@@ -1076,6 +1076,10 @@ body {
   display: flex;
 }
 
+.header-mobile__top{
+display: none;
+}
+
 @media screen and (max-width: 992px) {
   .header-desktop {
     display: none;
@@ -1415,6 +1419,10 @@ body {
 
 .main-wrap__right{
   width: 100%;
+}
+
+.main-wrap__right--shop{
+  margin-top: 55px;
 }
 
 @media screen and (max-width: 1080px) {
