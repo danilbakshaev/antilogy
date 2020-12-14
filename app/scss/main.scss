@@ -2124,10 +2124,11 @@ footer {
   margin-top: 40px;
 }
 
-.product-right__inner {
+.main-wrap__right--poduct {
   position: sticky;
   top: 70px;
   right: 0;
+  height: 450px;
 }
 
 .product-name {
@@ -2546,7 +2547,7 @@ footer {
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #212121;
-  margin: 21px auto 0;
+  margin-top: 21px;
   text-decoration-skip-ink: none;
   text-decoration-color: transparent;
   transition: all 0.2s linear;
@@ -2860,7 +2861,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding-top: 75px;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .main-wrap__left--cabinet {
@@ -2941,7 +2942,7 @@ footer {
 }
 
 .user-page__main {
-  margin-left: 134px;
+  margin-left: 120px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -3103,6 +3104,10 @@ footer {
 }
 
 /* ueser-order */
+.main-wra__right--order {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
 .user-order {
   width: 80%;
 }
