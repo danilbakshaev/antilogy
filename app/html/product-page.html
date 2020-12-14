@@ -1,119 +1,116 @@
 @@include('./include/header.html')
-    <main>
-        @@include('./include/header-mobile.html')
-        <section class="product">
-            <div class="container">
-                <div class="product__inner">
-                    <div class="product-left">
-                        <img src="/img/product/1.jpg" alt="">
-                        <img src="/img/product/2.jpg" alt="">
-                        <img src="/img/product/3.jpg" alt="">
-                        <img src="/img/product/4.jpg" alt="">
+<main>
+    @@include('./include/header-mobile.html')
+
+    <div class="main-wrap main-wrap--product container">
+        <div class="main-wrap__left">
+            <img src="/img/product/1.jpg" alt="">
+            <img src="/img/product/2.jpg" alt="">
+            <img src="/img/product/3.jpg" alt="">
+            <img src="/img/product/4.jpg" alt="">
+        </div>
+
+        <div class="main-wrap__right">
+            <div class="product-right__inner">
+                <div class="product-right__item">
+                    <div class="product-right__text">
+                        <p class="product-name">Свитер</p>
+                        <p class="product-price">32 000 ₽</p>
+                        <p class="product-description">Свеитер плотной вязки с логотипом</p>
                     </div>
-                    <div class="product-right">
-                        <div class="product-right__inner">
-                            <div class="product-right__item">
-                                <div class="product-right__text">
-                                    <p class="product-name">Свитер</p>
-                                    <p class="product-price">32 000 ₽</p>
-                                    <p class="product-description">Свеитер плотной вязки с логотипом</p>
-                                </div>
-                                <div class="colors">
-                                    <div class="color-text">Цвет</div>
-                                    <div class="colors__inner">
-                                        <div class="colors__item" style="background: #4A6079;"></div>
-                                        <div class="colors__item" style="background: #DD4B4B;"></div>
-                                        <div class="colors__item"
-                                            style="background: #F7FBFF; border: 0.5px solid #000000;">
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="colors">
+                        <div class="color-text">Цвет</div>
+                        <div class="colors__inner">
+                            <div class="colors__item" style="background: #4A6079;"></div>
+                            <div class="colors__item" style="background: #DD4B4B;"></div>
+                            <div class="colors__item" style="background: #F7FBFF; border: 0.5px solid #000000;">
                             </div>
-                            <div class="sizes">
-                                <div class="sizes__inner">
-                                    <div class="size__item">XS</div>
-                                    <div class="size__item">S</div>
-                                    <div class="size__item size__item--active">M</div>
-                                    <div class="size__item">L</div>
-                                    <div class="size__item size__item--disabled">XL</div>
-                                </div>
-                                <a href="#" class="sizes__text">Как выбрать размер</a>
-                            </div>
-                            <div class="product-btn">
-                                <button class="btn btn--product">Добавить в корзину</button>
-                                <button class="btn--fav">
-                                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path class="btn-fav--black"
-                                            d="M9.58801 16.4884C9.34416 16.4884 9.10901 16.3962 8.92604 16.2286C8.23397 15.5971 7.56698 15.0039 6.9786 14.4802L6.97559 14.4775C5.25026 12.9427 3.76041 11.6175 2.72347 10.3122C1.56478 8.85285 1.0249 7.46896 1.0249 5.95729C1.0249 4.48856 1.50758 3.13364 2.38363 2.14181C3.27004 1.1381 4.48661 0.585449 5.8092 0.585449C6.79764 0.585449 7.70312 0.911523 8.50023 1.55494C8.90229 1.87962 9.26689 2.27691 9.58801 2.74054C9.90946 2.27691 10.2737 1.87962 10.6761 1.55494C11.4729 0.911523 12.3784 0.585449 13.3668 0.585449C14.6894 0.585449 15.906 1.1381 16.7924 2.14181C17.6688 3.13364 18.1511 4.48856 18.1511 5.95729C18.1511 7.46896 17.6116 8.85285 16.4525 10.3122C15.4159 11.6179 13.9261 12.9431 12.2008 14.4775C11.6114 15.0018 10.9431 15.596 10.2496 16.229C10.067 16.3962 9.83186 16.4884 9.58801 16.4884ZM5.8092 1.63245C4.76992 1.63245 3.81527 2.06535 3.12086 2.85121C2.41607 3.64929 2.02772 4.75214 2.02772 5.95694C2.02772 7.22842 2.48063 8.36549 3.49549 9.64395C4.47657 10.8795 5.93598 12.1775 7.62585 13.6804L7.62886 13.6832C8.21958 14.2086 8.88925 14.8042 9.58634 15.4403C10.2874 14.8032 10.9581 14.2065 11.5502 13.6801C13.2397 12.1771 14.6991 10.8795 15.6802 9.6436C16.6951 8.36514 17.148 7.22807 17.148 5.95659C17.148 4.75145 16.7596 3.64859 16.0548 2.85086C15.3604 2.06465 14.4058 1.6321 13.3668 1.6321C12.6055 1.6321 11.9067 1.88451 11.2896 2.3827C10.7397 2.82677 10.3567 3.38815 10.1319 3.7809C10.0165 3.98304 9.81312 4.10349 9.58801 4.10349C9.36289 4.10349 9.15952 3.98304 9.04412 3.7809C8.81967 3.38815 8.43667 2.82677 7.88643 2.3827C7.26928 1.88521 6.57052 1.63245 5.8092 1.63245Z"
-                                            fill="white" stroke="white" stroke-width="0.305825" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <a href="#" class="product-link">Продолжить покупки
-                                <svg width="13" height="16" viewBox="0 0 13 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.99987 15L11.5332 8L4.99987 0.999999" stroke="#212121" />
-                                    <path d="M0.99987 15L7.5332 8L0.999871 0.999999" stroke="#212121" />
-                                </svg>
-                            </a>
                         </div>
                     </div>
                 </div>
+                <div class="sizes">
+                    <div class="sizes__inner">
+                        <div class="size__item">XS</div>
+                        <div class="size__item">S</div>
+                        <div class="size__item size__item--active">M</div>
+                        <div class="size__item">L</div>
+                        <div class="size__item size__item--disabled">XL</div>
+                    </div>
+                    <a href="#" class="sizes__text">Как выбрать размер</a>
+                </div>
+                <div class="product-btn">
+                    <button class="btn btn--product">Добавить в корзину</button>
+                    <button class="btn--fav">
+                        <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="btn-fav--black"
+                                d="M9.58801 16.4884C9.34416 16.4884 9.10901 16.3962 8.92604 16.2286C8.23397 15.5971 7.56698 15.0039 6.9786 14.4802L6.97559 14.4775C5.25026 12.9427 3.76041 11.6175 2.72347 10.3122C1.56478 8.85285 1.0249 7.46896 1.0249 5.95729C1.0249 4.48856 1.50758 3.13364 2.38363 2.14181C3.27004 1.1381 4.48661 0.585449 5.8092 0.585449C6.79764 0.585449 7.70312 0.911523 8.50023 1.55494C8.90229 1.87962 9.26689 2.27691 9.58801 2.74054C9.90946 2.27691 10.2737 1.87962 10.6761 1.55494C11.4729 0.911523 12.3784 0.585449 13.3668 0.585449C14.6894 0.585449 15.906 1.1381 16.7924 2.14181C17.6688 3.13364 18.1511 4.48856 18.1511 5.95729C18.1511 7.46896 17.6116 8.85285 16.4525 10.3122C15.4159 11.6179 13.9261 12.9431 12.2008 14.4775C11.6114 15.0018 10.9431 15.596 10.2496 16.229C10.067 16.3962 9.83186 16.4884 9.58801 16.4884ZM5.8092 1.63245C4.76992 1.63245 3.81527 2.06535 3.12086 2.85121C2.41607 3.64929 2.02772 4.75214 2.02772 5.95694C2.02772 7.22842 2.48063 8.36549 3.49549 9.64395C4.47657 10.8795 5.93598 12.1775 7.62585 13.6804L7.62886 13.6832C8.21958 14.2086 8.88925 14.8042 9.58634 15.4403C10.2874 14.8032 10.9581 14.2065 11.5502 13.6801C13.2397 12.1771 14.6991 10.8795 15.6802 9.6436C16.6951 8.36514 17.148 7.22807 17.148 5.95659C17.148 4.75145 16.7596 3.64859 16.0548 2.85086C15.3604 2.06465 14.4058 1.6321 13.3668 1.6321C12.6055 1.6321 11.9067 1.88451 11.2896 2.3827C10.7397 2.82677 10.3567 3.38815 10.1319 3.7809C10.0165 3.98304 9.81312 4.10349 9.58801 4.10349C9.36289 4.10349 9.15952 3.98304 9.04412 3.7809C8.81967 3.38815 8.43667 2.82677 7.88643 2.3827C7.26928 1.88521 6.57052 1.63245 5.8092 1.63245Z"
+                                fill="white" stroke="white" stroke-width="0.305825" />
+                        </svg>
+                    </button>
+                </div>
+                <a href="#" class="product-link">Продолжить покупки
+                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.99987 15L11.5332 8L4.99987 0.999999" stroke="#212121" />
+                        <path d="M0.99987 15L7.5332 8L0.999871 0.999999" stroke="#212121" />
+                    </svg>
+                </a>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <section class="other-products container">
-            <div class="title">
-                <h2 class="title__h2 title__h2--left title__h2--mobile">Товары в этом образе</h2>
-            </div>
-            <div class="other-products__inner">
-                <a href="#" class="shop-item shop-item--product">
-                    <img class="shop-item__img shop-item__img--product" src="/img/product/5.png">
-                    <p class="shop-item__name">Куртка с большими карманами</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-                <a href="#" class="shop-item shop-item--product">
-                    <img class="shop-item__img shop-item__img--product" src="/img/product/6.png">
-                    <p class="shop-item__name">Куртка с большими карманами</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-            </div>
-        </section>
 
-        <section class="latest-products container">
-            <div class="title">
-                <h2 class="title__h2 title__h2--left title__h2--mobile">Недавно просмотренные</h2>
-            </div>
-            <div class="latest-products__inner">
-                <a href="#" class="shop-item shop-item--latest-product">
-                    <img class="shop-item__img shop-item__img--latest-product" src="/img/product/7.jpg">
-                    <p class="shop-item__name">Куртка с большими карманами</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-                <a href="#" class="shop-item shop-item--latest-product">
-                    <img class="shop-item__img shop-item__img--latest-product" src="/img/product/8.jpg">
-                    <p class="shop-item__name">Куртка из</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-                <a href="#" class="shop-item shop-item--latest-product">
-                    <img class="shop-item__img shop-item__img--latest-product" src="/img/product/9.jpg">
-                    <p class="shop-item__name">Куртка из</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-                <a href="#" class="shop-item shop-item--latest-product">
-                    <img class="shop-item__img shop-item__img--latest-product" src="/img/product/10.jpg">
-                    <p class="shop-item__name">Куртка из</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-                <a href="#" class="shop-item shop-item--latest-product">
-                    <img class="shop-item__img shop-item__img--latest-product" src="/img/product/11.jpg">
-                    <p class="shop-item__name">Куртка из</p>
-                    <p class="shop-item__price">32 000 ₽</p>
-                </a>
-            </div>
-        </section>
 
-    </main>
 
-@@include('./include/footer.html') 
+    <section class="other-products container">
+        <div class="title">
+            <h2 class="title__h2 title__h2--left title__h2--mobile">Товары в этом образе</h2>
+        </div>
+        <div class="other-products__inner">
+            <a href="#" class="shop-item shop-item--product">
+                <img class="shop-item__img shop-item__img--product" src="/img/product/5.png">
+                <p class="shop-item__name">Куртка с большими карманами</p>
+                <p class="shop-item__price">32 000 ₽</p>
+            </a>
+            <a href="#" class="shop-item shop-item--product">
+                <img class="shop-item__img shop-item__img--product" src="/img/product/6.png">
+                <p class="shop-item__name">Куртка с большими карманами</p>
+                <p class="shop-item__price">32 000 ₽</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="latest-products container">
+        <div class="title">
+            <h2 class="title__h2 title__h2--left title__h2--mobile">Недавно просмотренные</h2>
+        </div>
+        <div class="latest-products__inner">
+            <a href="#" class="shop-item shop-item--latest-product">
+                <img class="shop-item__img shop-item__img--latest-product" src="/img/product/7.jpg">
+                <p class="shop-item__name">Куртка с большими карманами</p>
+                <p class="shop-item__price">32 000 ₽</p>
+            </a>
+            <a href="#" class="shop-item shop-item--latest-product">
+                <img class="shop-item__img shop-item__img--latest-product" src="/img/product/8.jpg">
+                <p class="shop-item__name">Куртка из</p>
+                <p class="shop-item__price">32 000 ₽</p>
+            </a>
+            <a href="#" class="shop-item shop-item--latest-product">
+                <img class="shop-item__img shop-item__img--latest-product" src="/img/product/9.jpg">
+                <p class="shop-item__name">Куртка из</p>
+                <p class="shop-item__price">32 000 ₽</p>
+            </a>
+            <a href="#" class="shop-item shop-item--latest-product">
+                <img class="shop-item__img shop-item__img--latest-product" src="/img/product/10.jpg">
+                <p class="shop-item__name">Куртка из</p>
+                <p class="shop-item__price">32 000 ₽</p>
+            </a>
+            <a href="#" class="shop-item shop-item--latest-product">
+                <img class="shop-item__img shop-item__img--latest-product" src="/img/product/11.jpg">
+                <p class="shop-item__name">Куртка из</p>
+                <p class="shop-item__price">32 000 ₽</p>
+            </a>
+        </div>
+    </section>
+</main>
+
+@@include('./include/footer.html')
