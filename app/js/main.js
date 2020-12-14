@@ -7,6 +7,23 @@ $(function () {
   })
 
 
+
+  // var moove = document.getElementById('moove');
+  // var wrap = document.getElementById('wrap');
+
+  // wrap.onmousemove = function( event ) {
+  //   moove.style.position = 'fixed';
+  //   moove.style.left = event.clientX + 'px';
+  //   moove.style.top = event.clientY + 'px';
+  // }
+
+
+  $('.demo').loupe({
+		width: 300, // ширина лупы
+		height: 2000, // высота лупы
+		loupe: 'loupe' // css класс лупы
+	});
+
   fool.onclick = function(){
     this.classList.toggle('rotate')
   }

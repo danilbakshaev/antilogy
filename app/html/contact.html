@@ -3,7 +3,7 @@
 
     <main>
 
-        <section class="contact container text-page text-page--contact">
+        <section class="main-wrap">
 					@@include('./include/left-menu.html')
             <!-- <div class="header-leftmenu header-leftmenu--mobile-hide">
                 <ul class="header-leftmenu__ul">
@@ -87,26 +87,28 @@
                     </li>
                 </ul>
             </div> -->
-            <div class="text-page__inner">
-                <h1 class="text-page__title">Контакты</h1>
-                <p class="text-page__text text-page__text--bold">
-                    Украина, г. Киев <br> пр. Перемоги д. 43
-                </p>
-                <a class="text-page__text text-page__link" href="tel:+380441234567">
-                    + 380 44 123-45-67</a>
-                <a class="text-page__text text-page__link" href="mailto:hello@antilogy.com"
-                    class="footer__item-link blue">hello@antilogy.com</a>
-
-                <div class="contact-questions">
-                    <h2 class="contact-question__title">Если у вас есть вопросы, свяжитесь с нами</h2>
-                    <form class="contact-question__form">
-                        <input class="sign-up__input sign-up__input--contact" autocomplete="off" type="text" name="name" placeholder="Имя" required>
-                        <input class="sign-up__input sign-up__input--contact" autocomplete="off" type="email" name="email"
-                            placeholder="Электронная почта" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                        <label for="message">Ваш вопрос или предложение</label>
-                        <textarea id="message" cols="100%" rows="7" name="message"></textarea>
-						<button type="submit" class="btn btn--contact">Отправить</button>
-                    </form>
+            <div class="main-wrap__right">
+                <div class="text-page__inner text-page__inner--return">
+                    <h1 class="text-page__title">Контакты</h1>
+                    <p class="text-page__text text-page__text--bold">
+                        Украина, г. Киев <br> пр. Перемоги д. 43
+                    </p>
+                    <a class="text-page__text text-page__link" href="tel:+380441234567">
+                        + 380 44 123-45-67</a>
+                    <a class="text-page__text text-page__link" href="mailto:hello@antilogy.com"
+                        class="footer__item-link blue">hello@antilogy.com</a>
+    
+                    <div class="contact-questions">
+                        <h2 class="contact-question__title">Если у вас есть вопросы, свяжитесь с нами</h2>
+                        <form class="contact-question__form">
+                            <input class="sign-up__input sign-up__input--contact" autocomplete="off" type="text" name="name" placeholder="Имя" required>
+                            <input class="sign-up__input sign-up__input--contact" autocomplete="off" type="email" name="email"
+                                placeholder="Электронная почта" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            <label for="message">Ваш вопрос или предложение</label>
+                            <textarea id="message" cols="100%" rows="7" name="message"></textarea>
+                            <button type="submit" class="btn btn--contact">Отправить</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
