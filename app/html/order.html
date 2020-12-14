@@ -1,24 +1,25 @@
 @@include('./include/header.html')
 @@include('./include/header-mobile.html')
-    <main>
+<main>
 
-        <section class="user-page container">
-            <div class="user-page__top">
-                <p class="user-page__top-text">Личный кабинет</p>
-                <svg class="close--mobile" width="21" height="20" viewBox="0 0 21 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L20 19M20 1L1 19" stroke="#212121" stroke-width="2" />
-                </svg>
+    <div class="main-wrap main-wrap--cabinet container">
+        <div class="user-page__mobile-wrap">
+            <div class="user-page__mobile-menu">
+                <p class="user-page__mobile-item">Мои данные</p>
+                <p class="user-page__mobile-item user-page__mobile-item--active">Мои заказы</p>
+                <p class="user-page__mobile-item">Избранное</p>
+                <p class="user-page__mobile-item">Бонусы</p>
             </div>
-            <div class="user-page__inner">
-                <div class="user-page__mobile-wrap">
-                    <div class="user-page__mobile-menu">
-                        <p class="user-page__mobile-item">Мои данные</p>
-                        <p class="user-page__mobile-item user-page__mobile-item--active">Мои заказы</p>
-                        <p class="user-page__mobile-item">Избранное</p>
-                        <p class="user-page__mobile-item">Бонусы</p>
-                    </div>
-                </div>
+        </div>
+        <div class="user-page__top">
+            <p class="user-page__top-text">Личный кабинет</p>
+            <svg class="close--mobile" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L20 19M20 1L1 19" stroke="#212121" stroke-width="2" />
+            </svg>
+        </div>
+        <div class="user-page__inner">
+            <div class="main-wra__left main-wrap__left--cabinet">
                 <svg class="user-page__avatar" width="53" height="53" viewBox="0 0 53 53" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <circle cx="26.5" cy="26.5" r="26.5" fill="#C4C4C4" />
@@ -44,6 +45,8 @@
                         <a href="#" class="user-page__aside-text">Выход</a>
                     </div>
                 </div>
+            </div>
+            <div class="main-wra__right">
                 <div class="user-page__main">
                     <h1 class="user-page__main-title user-page__main-title--order">Заказы</h1>
                     <div class="user-order">
@@ -183,8 +186,18 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-    </main>
+    <!-- <section class="user-page container">
+            
+            <div class="user-page__inner">
+                
+                
+                
+            </div>
+        </section> -->
 
-    @@include('./include/footer.html') 
+</main>
+
+@@include('./include/footer.html')
